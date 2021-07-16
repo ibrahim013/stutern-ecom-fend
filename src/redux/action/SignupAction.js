@@ -20,7 +20,6 @@ const signupFailure = (err) => ({
 
 export const signupAsync = (data) => async (dispatch) => {
   //validate function
-  console.log(data, '----')
   try {
     dispatch(signupStart());
     const response = await axios.post(`${BASEURL}/users/register`, data);
